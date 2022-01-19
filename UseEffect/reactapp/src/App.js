@@ -24,8 +24,8 @@ export default function App() {
   <>
     <div>
       <button onClick={() => setResourceType('posts')}>Posts</button>
-      <button onClick={() => setResourceType('posts')}>Users</button>
-      <button onClick={() => setResourceType('posts')}>Comments</button>
+      <button onClick={() => setResourceType('users')}>Users</button>
+      <button onClick={() => setResourceType('comments')}>Comments</button>
     </div>
     <h1>{resourceType}</h1>
     {items.map(item => {
