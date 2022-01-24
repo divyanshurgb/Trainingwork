@@ -1,6 +1,7 @@
 
 import React from 'react'
 
+const ErrorComponent = () => <div> {props.ignore</div>
 export default class Counter extends React.Component {
     constructor(props)) {
         console.log('Constructor')
@@ -55,4 +56,9 @@ componentWillUnmount() {
     console.log('Component Will Unmount')
     console.log('--------------------')
 }
+
+componetDidCatch(error, info) {
+    console.log('Component Did Catch')
+}
+
 ReactDOM.render(<App />, document.getElementById('root'))
