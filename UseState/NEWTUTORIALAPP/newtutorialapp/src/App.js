@@ -118,7 +118,14 @@ class App extends React.Component {
         return <div>
             <button onClick={this.mountCounter} disabled = {this.state.mount}>Mount</button>
             <button onClick={this.unmountCounter} disabled = {this.state.mount}>Unmount</button>
-            {this.state.mount ? <Counter /> : null}
+            <button onClick={this.ignoreProp} Ignore Prop></button>
+            <button onClick={this.seedGenerator} Generate Seed></button>
+
+            {this.state.mount ? 
+            <Counter
+                ignoreProp={this.state.ignoreProp
+                seed = {this.state.seed}
+                showErrorComponent = {this.state.showErrorComponent}}/> : null}
         </div>
     }
 }

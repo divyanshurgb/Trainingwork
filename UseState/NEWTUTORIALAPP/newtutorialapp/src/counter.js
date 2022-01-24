@@ -35,17 +35,21 @@ export default class Counter extends React.Component {
     }
 
     render () {
-        console.log('Render')
-
+        console.log('Render', this.state.error)
+        
+        if(this.props.showErrorComponent && this.state.error) {
+            return <div> We hae encountered an error! {this.state.error.} </div>
+        }
         return <div>
             <button onClick={this.increment}>Increment</button>
             <button onClick={this.decrement}>Decrement</button>
             <div className="counter">
                 Counter: {this.state.counter}
             </div>    
+            <ErrorComponent/>
         </div>
     }
-}
+
 
 componentDidUpdate(prevProps, prevState, snapshot) {
     console.log('Component Did Update')
@@ -59,6 +63,7 @@ componentWillUnmount() {
 
 componetDidCatch(error, info) {
     console.log('Component Did Catch')
+    this.
 }
-
+}
 ReactDOM.render(<App />, document.getElementById('root'))
