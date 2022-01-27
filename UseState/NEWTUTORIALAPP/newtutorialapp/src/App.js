@@ -96,38 +96,38 @@
 //     )
 // }
 
-import React from 'react'
-import ReactDOM from 'react-dom'
-import Counter from './counter'
+// import React from 'react'
+// import ReactDOM from 'react-dom'
+// import Counter from './counter'
 
-import CSS from './app.css'
+// import CSS from './app.css'
 
-class App extends React.Component {
-    constructor(props) {
-        super(props)
+// class App extends React.Component {
+//     constructor(props) {
+//         super(props)
 
-        this.state = {
-            mount: true
-        }
+//         this.state = {
+//             mount: true
+//         }
 
-        this.mountCounter = () => this.setState({mount: true})
-        this.unmountCounter = () => this.setState({mount: false})
-    }
+//         this.mountCounter = () => this.setState({mount: true})
+//         this.unmountCounter = () => this.setState({mount: false})
+//     }
 
-    render () {
-        return <div>
-            <button onClick={this.mountCounter} disabled = {this.state.mount}>Mount</button>
-            <button onClick={this.unmountCounter} disabled = {this.state.mount}>Unmount</button>
-            <button onClick={this.ignoreProp} Ignore Prop></button>
-            <button onClick={this.seedGenerator} Generate Seed></button>
+//     render () {
+//         return <div>
+//             <button onClick={this.mountCounter} disabled = {this.state.mount}>Mount</button>
+//             <button onClick={this.unmountCounter} disabled = {this.state.mount}>Unmount</button>
+//             <button onClick={this.ignoreProp} Ignore Prop></button>
+//             <button onClick={this.seedGenerator} Generate Seed></button>
 
-            {this.state.mount ? 
-            <Counter
-                ignoreProp={this.state.ignoreProp
-                seed = {this.state.seed}
-                showErrorComponent = {this.state.showErrorComponent}}/> : null}
-        </div>
-    }
-}
+//             {this.state.mount ? 
+//             <Counter
+//                 ignoreProp={this.state.ignoreProp
+//                 seed = {this.state.seed}
+//                 showErrorComponent = {this.state.showErrorComponent}}/> : null}
+//         </div>
+//     }
+// }
 
-ReactDOM.render(<App />, document.getElementById('root'))
+// ReactDOM.render(<App />, document.getElementById('root'))
