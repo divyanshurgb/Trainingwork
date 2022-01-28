@@ -1,8 +1,8 @@
 import React from "react";
 import {render} from "react-dom";
 
-import {Header} from "./components/Header";
-import {Home} from "./components/Home";
+import {Header} from "./app/components/Header";
+import {Home} from "./app/components/Home";
 
 class App extends React.Component {
     constructor() {
