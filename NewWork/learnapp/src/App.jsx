@@ -1,17 +1,25 @@
-import { makeStyles } from "@material-ui/core";
-import Navbar from "./components/Navbar";
+import { Button, makeStyles } from "@material-ui/core";
+import { Person } from "@material-ui/icons";
 
-const useStyles = makeStyles((theme) => ({
-  button:{
-    ...theme.myButton
-  },
-}))
+// const useStyles = makeStyles((theme) => ({
+//   button:{
+//     ...theme.myButtonaa
+//   },
+// }))
 
 const App = () => {
   const classes = useStyles()
   return (
   <div>
-    <Navbar />
+    <Button 
+    variant = "contained" 
+    color = "secondary" 
+    size = "large" 
+    startIcon = {<Person />}
+    className = {classes.button}
+    > 
+    Material UI 
+    </Button>
   </div>
   )
 }
