@@ -7,7 +7,11 @@ import Profile from './Pages/Profile'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter getUserConfirmation={
+      (message, callback) => {
+        callback(window.confirm())
+    }
+    }>
     <div className="App">
           <Header />
       <h1> React Router Tutorial </h1>
