@@ -21,9 +21,7 @@ function App() {
   <Switch>
     <Route path = '/' component = { Home } exact />
     <Route path = '/about' component = { About }/>
-    <Route path = "/profile">
-      <Profile login = {login} />
-    </Route>
+    <Route path = '/profile' component = { Profile }/>
     <Route path = '/post/:id' component = { Post } />
     <Route component = {NotFound} />
   </Switch>

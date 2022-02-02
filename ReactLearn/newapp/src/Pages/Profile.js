@@ -3,22 +3,21 @@ import { Link, Route, Switch, useHistory, useRouteMatch } from "react-router-dom
 import EditProfile from "../Components/EditProfile";
 import ViewProfile from "../Components/ViewProfile";
 
-const Profile = ({ login }) => {
+const Profile = () => {
     const history = useHistory();
 
-useEffect(() => {
-    if(!login) {
-        history.push("/");
-    }
-}, [login, history]);
+// useEffect(() => {
+//     if(!login) {
+//         history.push("/");
+//     }
+// }, [login, history]);
 
-const { path, url } = useRouteMatch(() => {
-    
-})
+const { path, url } = useRouteMatch()
+
 return(
     <> 
     <h1> Profile Page </h1> 
-    <ul>
+    {/* <ul>
         <li>
             <Link to ={ `${url}/viewprofile` }>View</Link>
         </li>
@@ -31,8 +30,9 @@ return(
     <Switch>
         <Route path = {`${path}/viewprofile`} component = {ViewProfile} />
         <Route path = {`${path}/editprofile`} component = {EditProfile}/>
-    </Switch>
-    </>);
+    </Switch> */}
+    </>
+    );
 };
 
 export default Profile;
