@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react"
+import { BrowserRouter, Route, Switch, Link } from "react-router-dom"
+import './App.css'
+import Header from "./Components/Header"
+import Home from './Pages/Home'
+import About from './Pages/About'
+import Profile from './Pages/Profile'
+import NotFound from './Pages/NotFound'
+import Post from './Pages/Post'
 
 function App() {
+  const [login, setLogin] = useState(false);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello world! 
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <BrowserRouter>
+      <div className="App">
+        <Header />
+        <button onClick={() => setLogin(!login)}>{login?"logout" : "login"}
+        </button>
+      <h1> React Router Tutorial </h1>
+  <Switch>
+    <Route path = '/' component = { Home } exact />
+    <Route path = '/about' component = { About }/>
+    <Route path = '/profile' component = { Profile }/>
+    <Route path = '/post/:id' component = { Post } />
+    <Route component = {NotFound} />
+  </Switch>
+  </div>
+</BrowserRouter>
   );
 }
 
