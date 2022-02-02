@@ -7,6 +7,7 @@ import About from './Pages/About'
 import Profile from './Pages/Profile'
 import NotFound from './Pages/NotFound'
 import Post from './Pages/Post'
+import {Button} from "@material-ui/core"
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -15,8 +16,9 @@ function App() {
   <BrowserRouter>
       <div className="App">
         <Header />
-        <button onClick={() => setLogin(!login)}>{login?"logout" : "login"}
-        </button>
+        <Button color="primary" variant="contained" onClick={() => setLogin(!login)}>
+          {login?"logout" : "login"}
+        </Button>
       <h1> React Router Tutorial </h1>
   <Switch>
     <Route path = '/' component = { Home } exact />
@@ -31,3 +33,28 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+// //// Mapping 
+
+// const employees = [
+//   "Anthony", 
+//   "Kevin", 
+//   "George"
+// ];
+// export default function App () {
+//   return (
+//     <div className="App">
+//       <h1> { employees[0]] </h1>
+//       <h1> { employees[0]] </h1>
+//       <h1> { employees[0]] </h1>
+//         <h1> { employees[0]] </h1>
+
+//     </div>
+//   )
+// }
