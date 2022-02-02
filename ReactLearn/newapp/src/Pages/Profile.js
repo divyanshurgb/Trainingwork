@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link, Route, Switch, useHistory, useRouteMatch } from "react-router-dom";
-import ViewProfile from "../Components/ViewProfile";
 import EditProfile from "../Components/EditProfile";
+import ViewProfile from "../Components/ViewProfile";
 
 const Profile = ({ login }) => {
     const history = useHistory();
@@ -29,7 +29,7 @@ return(
         </li>
     </ul>
     <Switch>
-        <Route path = {`${path}/viewprofile`} component = {viewProfile} />
+        <Route path = {`${path}/viewprofile`} component = {ViewProfile} />
         <Route path = {`${path}/editprofile`} component = {EditProfile}/>
     </Switch>
     </>);
