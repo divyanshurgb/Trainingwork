@@ -29,8 +29,8 @@ return(
         </li>
     </ul>
     <Switch>
-        <Route path = {${path}`/viewprofile`} component = {viewProfile} />
-        <Route path = {${path}`/editprofile`} component = {EditProfile}/>
+        <Route path = {`${path}/viewprofile`} component = {viewProfile} />
+        <Route path = {`${path}/editprofile`} component = {EditProfile}/>
     </Switch>
     </>);
 };
