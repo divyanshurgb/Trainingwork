@@ -8,6 +8,8 @@ import Profile from './Pages/Profile'
 import NotFound from './Pages/NotFound'
 import Post from './Pages/Post'
 import {Button} from "@material-ui/core"
+import HomeIcon from "@material-ui/icons/HomeTwoTone";
+import DeleteIcon from "@material-ui/icons/DeleteForever";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -16,10 +18,14 @@ function App() {
   <BrowserRouter>
       <div className="App">
         <Header />
+        <HomeIcon style={{ color: "green" }} />
+        <DeleteIcon />
         <Button color="primary" variant="contained" onClick={() => setLogin(!login)}>
           {login?"logout" : "login"}
         </Button>
-      <h1> React Router Tutorial </h1>
+        
+        <h1> React Router Tutorial </h1>
+        
   <Switch>
     <Route path = '/' component = { Home } exact />
     <Route path = '/about' component = { About }/>
