@@ -26,15 +26,16 @@ function App() {
         {/* <DeleteIcon /> */}     
         <HomeIcon style={{ color: "green" }} />
         <Box color="white" bgcolor="palevioletred" p={1}>
-      Welcome to the app
-      <Container maxWidth="sm">
+          Welcome to the app
+           </Box>
+      <Container maxWidth="md">
       <Typography component="div" style={{ 
         backgroundColor: 'Orange', height: '100vh' 
       }}>
-        Greetings from DIV!
+          lorem ipsum dolor sit amet, consectetur adipiscing elit et
       </Typography>
     </Container>
-    </Box>
+   
   <Switch>
     <Route path = '/' component = { Home } exact />
     <Route path = '/about' component = { About }/>
