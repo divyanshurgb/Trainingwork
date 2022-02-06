@@ -22,12 +22,11 @@ function App() {
   <BrowserRouter>
       <div className="App"  style={{ marginLeft: '40%', marginTop: '60px', width: '30%'}} >
       <Navbar/> 
-        <Header />
         {/* <DeleteIcon /> */}     
         <HomeIcon style={{ color: "green" }} />
         <Box color="white" bgcolor="palevioletred" p={1}>
           Welcome to the app
-           </Box>
+            </Box>
       <Container maxWidth="md">
       <Typography component="div" style={{ 
         backgroundColor: 'Orange', height: '100vh' 
@@ -35,12 +34,12 @@ function App() {
           lorem ipsum dolor sit amet, consectetur adipiscing elit et
       </Typography>
     </Container>
-   
+    
   <Switch>
     <Route path = '/' component = { Home } exact />
     <Route path = '/about' component = { About }/>
     <Route path = '/profile' component = { Profile }/>
-    <Route path = '/post/:id' component = { Post } />
+    <Route path = '/post/:id' component = { Post } />d
     <Route component = {NotFound} />
   </Switch>
   <Button color="primary" variant="contained" onClick={() => setLogin(!login)}>
