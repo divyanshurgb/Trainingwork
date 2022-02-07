@@ -43,7 +43,7 @@ export default function Navbar() {
             </div>
           </IconButton>
           <Typography variant="h6" color="inherit">
-            REACT ROUTER TUTORIAL
+            REACT ROUTER
           </Typography>
         </Toolbar>
       </AppBar>
