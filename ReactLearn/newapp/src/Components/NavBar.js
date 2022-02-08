@@ -16,20 +16,12 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
 }));
-
-  // function myMenu() {
-  //   return( 
-  //     <div id = "menu" style = {{ marginLeft: '40%', marginTop: '60px', width: '30%' }}>
-  //     </div>
-  //   )
-  // }
+  
 // Exporting Default Navbar to the App.js File
-
 export default function Navbar() {
   const classes = useStyles();
   const [show, setShow] = useState(true);
 
-  
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -37,13 +29,13 @@ export default function Navbar() {
           <IconButton edge="start" 
             className={classes.menuButton} 
             color="inherit" aria-label="menu">
-            <MenuIcon onClick={() => setShow((s) => !s)}>toggle</MenuIcon>
+              {/* <MenuIcon /> */}
+              <MenuIcon onClick={() => setShow((s) => !s)}>toggle</MenuIcon>
             <div style={{ display: show ? "block" : "none" }}> 
               <Header />
             </div>
           </IconButton>
           <Typography variant="h6" color="inherit">
-            REACT ROUTER
           </Typography>
         </Toolbar>
       </AppBar>
