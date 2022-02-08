@@ -15,6 +15,8 @@ import Navbar from './Components/NavBar'
 import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Login from "./Pages/Login/Login"
+import Mapping from "./Components/Mapping"
+
 function App() {
   const [login, setLogin] = useState(false);
 
@@ -22,10 +24,6 @@ function App() {
   <BrowserRouter>
       <div className="App"  style={{ marginLeft: '40%', marginTop: '60px', width: '30%'}} >
       <Navbar/> 
-        {/* <Header /> */}
-        {/* <DeleteIcon /> */}     
-        {/* <HomeIcon style={{ color: "green" }} /> */}
-        
         <Switch>
     {/* <Route path = '/' component = { Home } exact /> */}
             <Route exact path = '/' component = { Login } />
@@ -46,7 +44,8 @@ function App() {
         Greetings from DIV!
             </Typography>
           </Container>
-        </Box>      
+        </Box> 
+      <Mapping />     
   </div>
 </BrowserRouter>
   );
