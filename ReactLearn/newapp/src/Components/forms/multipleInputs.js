@@ -1,25 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 
 const MultipleInputs = () => {
-
-  const [userRegistration, setuserRegistration] = useState({
+  const [userRegistration, setUserRegistration] = useState({
     username: "",
     email: "",
     phone: "",
     password: ""
-  })
+  });
+  
+  const [records, setRecords] = useState([]);
 
   const handleInput = (e) => {
-      const name = e.target.name;
-      const value = e.target.value;
-      console.log(name, value);
+    const name = e.target.name;
+    const value = e.target.value;
+    console.log(name, value);
 
-      setuserRegistration(... userRegistration, [name] : value, email : "testing")
-  }
+    setUserRegistration({ ...userRegistration, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const newRecord = { ...userRegistration, id : new Date().getTime().toString() };
+    console.log(records);
+    setRecords([ ...records, newRecord]);
+    console.log(records);
+    
+    setUserRegistration({username: "", email: "", phone: "", password: ""});
+  };
 
   return (
     <>
-      <form action="">
+      <form action="" onSubmit={handleSubmit}>
         <div>
           <label htmlFor="username"> Fullname </label>
           <input
@@ -67,8 +79,21 @@ const MultipleInputs = () => {
 
         <button type="submit"> Registration </button>
       </form>
+        <div>
+        {
+          records.map((curElem) => {
+          const { id, username, email, phone, password } = curElem;
+          return (
+            <div className="showDataStyle" key={curElem.id}>
+              <p> {username} </p>
+              <p> {email} </p>
+              <p> {phone} </p>
+              <p> {password} </p>
+            </div>
+          );
+        })}
+        </div>
     </>
-  );
-};
-
+)
+}
 export default MultipleInputs;
