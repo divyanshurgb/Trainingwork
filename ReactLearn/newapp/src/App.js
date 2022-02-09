@@ -16,6 +16,7 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import Login from "./Pages/Login/Login"
 import Mapping from "./Components/Mapping"
+import MultipleInputs from "./Components/forms/multipleInputs"
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -35,6 +36,7 @@ function App() {
   {/* <Button color="primary" variant="contained" onClick={() => setLogin(!login)}>
           {login?"logout" : "login"}
         </Button>   */}
+        <MultipleInputs/>
         <Box color="white" bgcolor="palevioletred" p={1}>
       Welcome to the app
           <Container maxWidth="sm">

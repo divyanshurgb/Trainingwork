@@ -27,15 +27,13 @@ const Mapping = () => {
             {books.map((book)=>
                 <p key={book.id}>{book.name} </p>)
                 }
- 
- 
- 
+
             <h2>Year published</h2>
             {books.map((book)=>
                 <li key={book.id}>{book.year_published}</li>
                 )}
         </div>
-     );
+      );
    };
 
 export default Mapping;
