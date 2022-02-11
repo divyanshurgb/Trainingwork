@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import {Link} from 'react-router-dom';
+import './multipleInputs';
 
 const MultipleInputs = () => {
   const [userRegistration, setUserRegistration] = useState({
@@ -31,7 +33,9 @@ const MultipleInputs = () => {
 
   return (
     <>
+      <div className="div-login">
       <form action="" onSubmit={handleSubmit}>
+        <div>
         <div>
           <label htmlFor="username"> Fullname </label>
           <input
@@ -76,8 +80,9 @@ const MultipleInputs = () => {
             id="password"
           />
         </div>
-
+    
         <button type="submit"> Registration </button>
+        </div>
       </form>
         <div>
         {
@@ -93,6 +98,11 @@ const MultipleInputs = () => {
           );
         })}
         </div>
+        <Link to="/Login" variant = "body2">
+        Already have an account? Login
+        </Link>
+      
+      </div>
     </>
 )
 }

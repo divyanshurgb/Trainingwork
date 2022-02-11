@@ -9,19 +9,19 @@ const books = [
     id:1
 
   },
- {
+  {
     name: 'The Great Gatsby',
     author: ' F. Scott Fitzgerald',
     genre: "tragedy",
     year_published: 1925,
     id:2
-   },
- ];
- 
+    },
+  ];
+  
 const Mapping = () => {
 
     return (
- 
+  
       <div>
             <h1>Book Names</h1>
             {books.map((book)=>
@@ -34,7 +34,7 @@ const Mapping = () => {
                 )}
         </div>
       );
-   };
+    };
 
 export default Mapping;
 
